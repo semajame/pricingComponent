@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/mobile.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="shortcut icon" href="/img/favicon-32x32.png" type="image/x-icon">
+    <title>Pricing Component</title>
+</head>
+<body>
+    <main>
+        <div class="header-content">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+
+        <img src="/img/pattern-circles.svg" alt="cirlces" class="circle">
+    </main>
+
+    <section>
+        <div class="content">
+            <div class="content1">
+                <div class="top-content-flex">
+                    <h2><span id="pageviews"></span>PAGEVIEWS</h2>
+
+                    <p><span id="pricerange"></span>/ month</p>
+                </div>
+
+                <label class="input-container">
+                    <input type="range" class="input-slider" min="1" max="5" id="slider" value="3">
+                </label>
+
+                <div class="billing-container">
+                    <p class="monthly">Monthly Billing</p>
+
+                    <label class="switch">
+                        <input type="checkbox" id="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    
+                    <p class="yearly">Yearly Billing<span class="discount">25% <span class="discount2">discount</span></span></p>
+                </div>
+            </div>
+            
+            <hr>
+
+            <div class="bottom-content-container">
+                <div class="bottom-left-content">
+                    <div class="benefits">
+                        <img src="/img/icon-check.svg" alt=""><p>Unlimited websites</p>
+                    </div>
+                    <div class="benefits">
+                        <img src="/img/icon-check.svg" alt=""><p>100% data ownership</p>
+                    </div>
+                    <div class="benefits">
+                        <img src="/img/icon-check.svg" alt=""><p>Email reports</p>
+                    </div>
+                </div>
+                <div class="bottom-right-content">
+                    <button type="submit">Start my trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="/script.js"></script>
+</html>

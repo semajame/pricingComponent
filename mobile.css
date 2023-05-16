@@ -1,0 +1,99 @@
+@media screen and (max-width: 615px) {
+    
+    /* CONTENT */
+    
+    section{
+        padding: 0 1rem;
+    }
+    
+    .content{
+        height: 500px !important;
+    }
+
+    .content1{
+        padding: 2rem 4rem 0 4rem;
+    }
+
+    .top-content-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-content-flex h2{
+        font-size: 0.825rem;
+    }
+
+    #pageviews{
+        font-size: 2rem;
+    }
+
+    #pricerange{
+        font-size: 2rem;
+    }
+
+    .top-content-flex p{
+        font-size: 0.825rem;
+    }
+
+    .top-content-flex span{
+        color: var(--dark-desaturated-blue);
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-right: 0.5rem;
+    }
+
+    .input-container{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-slider{
+        width: 100%;
+        /* background: var(--strong-cyan);  */
+    }
+
+    .billing-container{
+        margin: 2.8rem 0 2.5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.825rem;
+        color: var(--grayish-blue);
+    }
+
+    .discount{
+        margin-left: 0.7rem;
+        background-color: var(--light-grayish-red);
+        padding: 0.5rem;
+        border-radius: 20px;
+        color: var(--light-red);
+    }
+
+    .discount2{
+        display: none;
+    }
+
+    hr{
+        width: 100%;
+        height: 1px;
+        color: var(--light-grayish-blue);
+    }
+
+    .bottom-content-container{
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 1rem 4rem 0 4rem;
+    }
+
+    .bottom-left-content{
+        margin-bottom: 1rem;
+    }
+
+    .benefits{
+        justify-content: center;
+    }
+
+}

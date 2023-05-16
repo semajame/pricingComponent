@@ -1,0 +1,272 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
+- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
+- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
+- Light Red (Discount Text): hsl(15, 100%, 70%)
+- Pale Blue (CTA Text): hsl(226, 100%, 87%)
+
+### Neutral
+
+- White (Pricing Component Background): hsl (0, 0%, 100%)
+- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
+- Grayish Blue (Text): hsl(225, 20%, 60%)
+- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
+
+## Typography
+
+### Body Copy
+
+- Font size (Introductory Paragraph): 15px
+
+### Font
+
+font-family: 'Manrope', sans-serif;
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 600, 800 */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root{
+    --soft-cyan: hsl(174, 77%, 80%); /*(Full Slider Bar)*/
+    --strong-cyan: hsl(174, 86%, 45%); /*(Slider Backround)*/
+    --light-grayish-red: hsl(14, 92%, 95%); /*(Discount Background)*/
+    --light-red: hsl(15, 100%, 70%); /*(Discount Text)*/
+    --pale-blue: hsl(226, 100%, 87%); /*(CTA Text)*/
+    --white: hsl (0, 0%, 100%); /*(Pricing Component Background)*/
+    --very-pale-blue: hsl(230, 100%, 99%); /*(Main Background)*/ 
+    --light-grayish-blue: hsl(224, 65%, 95%); /*(Empty Slider Bar)*/
+    --light-grayish-blue: hsl(223, 50%, 87%); /*(Toggle Background)*/
+    --grayish-blue: hsl(225, 20%, 60%); /*(text)*/
+    --dark-desaturated-blue: hsl(227, 35%, 25%); /*(Text & CTA Background)*/
+}
+
+main{
+    background: url(/img/bg-pattern.svg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+}
+
+.circle{
+    position: relative;
+    z-index: 999;
+    margin: -7.5rem auto 0 auto;
+}
+
+.header-content{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.header-content h1{
+    color: var(--dark-desaturated-blue);
+}
+
+.header-content p{
+    margin-top: 0.825rem;
+    color: var(--grayish-blue);
+}
+
+/* CONTENT */
+
+section{
+    margin-top: -12rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 600px;
+    height: 420px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 7px 15px -3px rgba(0,0,0,0.1);
+    
+}
+
+.content1{
+    padding: 2rem 4rem 0 4rem;
+}
+
+.top-content-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-content-flex h2{
+    font-size: 0.925rem;
+    color: var(--grayish-blue);
+}
+
+.top-content-flex p{
+    display: flex;
+    align-items: center;
+    color: var(--grayish-blue);
+}
+
+.top-content-flex span{
+    color: var(--dark-desaturated-blue);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-right: 0.5rem;
+}
+
+.input-container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=range] {
+    height: 34px;
+    margin: 10px 0;
+    width: 100%;
+}
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 9px;
+    cursor: pointer;
+    background: var(--soft-cyan);
+    border-radius: 10px;
+    border: none;
+  }
+  input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: url(/img/icon-slider.svg)no-repeat center;
+    background-color: var(--strong-cyan);
+    background-size: 25px;
+    cursor: pointer;
+    box-shadow: 0px 10px 33px 5px var(--strong-cyan);
+  }
+  
+/* SWITCH */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+   }
+   
+   /* Hide default HTML checkbox */
+   .switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: #fff;
+    transition: .4s;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.6em;
+    width: 1.6em;
+    border-radius: 16px;
+    left: 1.2px;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px #999999;
+    transition: .4s;
+   }
+   
+   input:checked + .slider {
+    background-color: var(--strong-cyan);
+    border: 1px solid transparent;
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.3em);
+   }
+
+.billing-container{
+    margin: 2.8rem 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.825rem;
+    color: var(--grayish-blue);
+}
+
+.discount{
+    margin-left: 0.7rem;
+    background-color: var(--light-grayish-red);
+    padding: 0.5rem;
+    border-radius: 20px;
+    color: var(--light-red);
+}
+hr{
+    width: 100%;
+    height: 1px;
+    color: rgba(255, 255, 255, 0.418);
+}
+
+.bottom-content-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem 0 4rem;
+}
+
+.benefits{
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+}
+
+.benefits img{
+    margin-right: 0.8rem;
+}
+
+.benefits p{
+    font-size: 0.925rem;
+    color: var(--grayish-blue);
+}
+
+.bottom-right-content button{
+    text-decoration: none;
+    border: none;
+    color: var(--light-grayish-blue);
+    padding: 0.625rem 2rem;
+    border-radius: 30px;
+    font-size: 0.925rem;
+    background-color: var(--dark-desaturated-blue);
+    cursor: pointer;
+}
+
+.bottom-right-content button:hover{
+    color: #fff;
+}
